@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CA645B1-46E5-4D60-BFC1-A7D15D941759}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kelompok1</RootNamespace>
+    <AssemblyName>Kelompok1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\User\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\User\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="View\Dokter\DokterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dokter\DokterForm.designer.cs">
+      <DependentUpon>DokterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dokter\FormDokterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dokter\FormDokterForm.designer.cs">
+      <DependentUpon>FormDokterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCekup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportCekup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Cekup\ReportKartuCekup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cekup\ReportKartuCekup.Designer.cs">
+      <DependentUpon>ReportKartuCekup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cekup\FormCekup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cekup\FormCekup.Designer.cs">
+      <DependentUpon>FormCekup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cekup.cs" />
+    <Compile Include="Model\Dokter.cs" />
+    <Compile Include="View\Cekup\CekupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cekup\CekupForm.designer.cs">
+      <DependentUpon>CekupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Obat.cs" />
+    <Compile Include="View\Obat\ObatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Obat\ObatForm.designer.cs">
+      <DependentUpon>ObatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Obat\FormObat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Obat\FormObat.designer.cs">
+      <DependentUpon>FormObat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pasien\FormPasien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pasien\FormPasien.designer.cs">
+      <DependentUpon>FormPasien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Pasien.cs" />
+    <Compile Include="View\Pasien\PasienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pasien\PasienForm.designer.cs">
+      <DependentUpon>PasienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Cekup\DetailCekup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Cekup\DetailCekup.Designer.cs">
+      <DependentUpon>DetailCekup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Koneksi.cs" />
+    <Compile Include="Model\Penyakit.cs" />
+    <Compile Include="View\Penyakit\PenyakitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Penyakit\PenyakitForm.designer.cs">
+      <DependentUpon>PenyakitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Penyakit\FormPenyakit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Penyakit\FormPenyakit.designer.cs">
+      <DependentUpon>FormPenyakit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TampilanPesan.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginFOrm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dokter\DokterForm.resx">
+      <DependentUpon>DokterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dokter\FormDokterForm.resx">
+      <DependentUpon>FormDokterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCekup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportCekup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cekup\ReportKartuCekup.resx">
+      <DependentUpon>ReportKartuCekup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cekup\CekupForm.resx">
+      <DependentUpon>CekupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cekup\FormCekup.resx">
+      <DependentUpon>FormCekup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Obat\ObatForm.resx">
+      <DependentUpon>ObatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Obat\FormObat.resx">
+      <DependentUpon>FormObat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pasien\FormPasien.resx">
+      <DependentUpon>FormPasien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pasien\PasienForm.resx">
+      <DependentUpon>PasienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Cekup\DetailCekup.resx">
+      <DependentUpon>DetailCekup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Penyakit\PenyakitForm.resx">
+      <DependentUpon>PenyakitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Penyakit\FormPenyakit.resx">
+      <DependentUpon>FormPenyakit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\User\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\patient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\doctor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Untitled-1 copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\medicines.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\desease.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\recipes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\desease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\medicines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\recipes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\patients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\soft-skin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logo2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_drop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon\b_primary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\011 %28Small%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\13 %28Small%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\1653773_10201811224905833_1513880287_n %28Small%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\assassac %28Small%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\IMG00186-20131009-0840 %28Small%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\sulastri.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\prima.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\resna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\dera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\foto\rifan.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
